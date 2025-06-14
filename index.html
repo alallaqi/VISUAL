@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wildlife Narration Web App - Real-time AI-powered narration of animal behavior from live YouTube streams, designed for visually impaired users.">
+  <meta name="keywords" content="accessibility, wildlife, narration, screen reader, WCAG, AI, live streams">
+  <meta name="author" content="Wildlife Narration Team">
+  
+  <!-- Accessibility and SEO -->
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0ea5e9">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Wildlife Narration Web App">
+  <meta property="og:description" content="Experience wildlife through AI-powered narration designed for accessibility">
+  <meta property="og:url" content="https://wildlife-narration.app">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  
+  <!-- Preconnect to external domains for performance -->
+  <link rel="preconnect" href="https://www.youtube.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  
+  <title>Wildlife Narration - Accessible Wildlife Streaming</title>
+  
+  <!-- Critical CSS will be inlined here by build process -->
+  <style>
+    /* Critical loading styles */
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+    }
+    
+    .loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .loading-spinner {
+      width: 2rem;
+      height: 2rem;
+      border: 2px solid #e2e8f0;
+      border-top: 2px solid #0ea5e9;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* High contrast mode support */
+    @media (prefers-contrast: high) {
+      body {
+        background-color: #000000;
+        color: #ffffff;
+      }
+    }
+    
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+      .loading-spinner {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip to main content link for screen readers -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary-600 focus:text-white focus:rounded">
+    Skip to main content
+  </a>
+  
+  <!-- Loading state -->
+  <div id="loading" class="loading" aria-live="polite">
+    <div class="loading-spinner" aria-hidden="true"></div>
+    <p>Loading Wildlife Narration App...</p>
+    <p class="sr-only">Please wait while the application loads. This may take a few moments.</p>
+  </div>
+  
+  <!-- Main application container -->
+  <div id="app" style="display: none;">
+    <!-- Screen reader announcement region -->
+    <div id="announcements" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+    
+    <!-- Main navigation -->
+    <nav role="navigation" aria-label="Main navigation">
+      <wildlife-nav></wildlife-nav>
+    </nav>
+    
+    <!-- Main content area -->
+    <main id="main-content" role="main" tabindex="-1">
+      <wildlife-app></wildlife-app>
+    </main>
+    
+    <!-- Footer -->
+    <footer role="contentinfo">
+      <wildlife-footer></wildlife-footer>
+    </footer>
+  </div>
+  
+  <!-- Error boundary for JavaScript errors -->
+  <div id="error-boundary" style="display: none;" role="alert" aria-live="assertive">
+    <h1>Application Error</h1>
+    <p>We're sorry, but something went wrong. Please refresh the page to try again.</p>
+    <button onclick="window.location.reload()" class="px-4 py-2 bg-primary-600 text-white rounded">
+      Refresh Page
+    </button>
+  </div>
+  
+  <!-- Application scripts -->
+  <script type="module" src="/src/main.ts"></script>
+  
+  <!-- Service worker registration for PWA features -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then((registration) => {
+            console.log('SW registered: ', registration);
+          })
+          .catch((registrationError) => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+  </script>
+  
+  <!-- Global error handler -->
+  <script>
+    window.addEventListener('error', (event) => {
+      console.error('Global error:', event.error);
+      document.getElementById('app').style.display = 'none';
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('error-boundary').style.display = 'block';
+    });
+    
+    window.addEventListener('unhandledrejection', (event) => {
+      console.error('Unhandled promise rejection:', event.reason);
+    });
+  </script>
+</body>
+</html> 
