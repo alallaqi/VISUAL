@@ -1,0 +1,11 @@
+# Task ID: 15
+# Title: Real-time Narration Control System
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Create the control system for starting, stopping, and managing real-time narration with user preferences.
+# Details:
+Implement narration state management, user control interface, pause/resume functionality, and intelligent narration timing based on activity detection.
+
+# Test Strategy:
+Control system testing, state management validation, and user interaction flow testing.

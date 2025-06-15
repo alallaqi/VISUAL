@@ -1,0 +1,11 @@
+# Task ID: 8
+# Title: Video Frame Extraction Service
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Implement real-time frame extraction from YouTube live streams using yt-dlp and FFmpeg.
+# Details:
+Set up FFmpeg integration for frame extraction, implement frame rate optimization, and create frame preprocessing pipeline for AI analysis.
+
+# Test Strategy:
+Performance testing for frame extraction speed, memory usage monitoring, and frame quality validation.

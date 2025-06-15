@@ -1,0 +1,11 @@
+# Task ID: 5
+# Title: YouTube Stream Metadata Integration
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Implement yt-dlp integration to fetch and display live stream information and metadata.
+# Details:
+Set up yt-dlp Python service, create API endpoints for stream metadata, and implement frontend integration to display stream information, viewer counts, and status.
+
+# Test Strategy:
+Integration tests for yt-dlp service, API endpoint testing, and error handling for unavailable streams.

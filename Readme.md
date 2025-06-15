@@ -1,16 +1,18 @@
 # 🦁 Wildlife Narration Web App (Lit + AI)
 
-A web-based proof-of-concept for **real-time narration of animal behavior** from **live YouTube animal streams**, designed for **visually impaired users**. Built with modern Web Components (Lit), HuggingFace models, RAG + LLM pipelines, and browser speech synthesis.
+A web-based proof-of-concept for **real-time narration of animal behavior** from **live YouTube animal streams**, designed for **Blind and visually impaired users**. Built with modern Web Components (Lit), Yolo.v8(Object recognition with tracking extension), RAG + LLM pipelines, and text to speech synthesis.
 
 ---
 
 ## 📸 Features
 
 - Watch live animal cams (YouTube Live)
-- Detect and narrate animal behavior using AI
+- Detect and narrate animal behavior and scnery using AI
 - Narration style filter: **adults** or **minors**
+- Narration style filter: **Field scientist** or **Safari adventurer** or **Calm observer**
 - Browser-based text-to-speech (TTS)
 - On-demand inference (runs only when narration is requested)
+
 
 ---
 

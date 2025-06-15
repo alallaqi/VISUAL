@@ -1,0 +1,11 @@
+# Task ID: 13
+# Title: Multiple Narration Style System
+# Status: pending
+# Dependencies: None
+# Priority: medium
+# Description: Implement different narration styles (Field Scientist, Safari Adventurer, Calm Observer) with style-specific prompts.
+# Details:
+Create style-specific prompt templates, implement style switching logic, and establish tone and vocabulary guidelines for each narration style.
+
+# Test Strategy:
+Style consistency testing, user preference validation, and narration quality comparison across styles.
