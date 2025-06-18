@@ -270,7 +270,7 @@ export class AccessibilityService {
     this.trapFocusElements = focusableElements;
     
     if (focusableElements.length > 0) {
-      focusableElements[0].focus();
+      focusableElements[0]?.focus();
     }
   }
 

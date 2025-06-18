@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 @customElement('wildlife-nav')
 export class WildlifeNav extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: block;
       background: white;
@@ -81,7 +81,7 @@ export class WildlifeNav extends LitElement {
     }
   `;
 
-  render() {
+  override render() {
     return html`
       <nav class="nav-container" role="navigation" aria-label="Main navigation">
         <a href="#" class="logo" aria-label="Wildlife Narration Home">

@@ -68,29 +68,56 @@ sequenceDiagram
 
 ## 🧪 Quickstart
 
-1. **Clone and serve locally**
+### One-Command Setup & Development
+
+1. **Clone and setup everything**
 
    ```bash
    git clone <this-repo-url>
-   cd wildlife-narration
+   cd wildlife-narration-web-app
+   
+   # Install all dependencies (Node.js + Python)
+   npm run setup
    ```
 
-   You'll need a static server. Use Python or Node:
+2. **Start both frontend and backend**
 
-   **Using Python:**
    ```bash
-   python -m http.server 8000
+   # Runs both servers concurrently
+   npm run dev
    ```
 
-   **Using Node:**
-   ```bash
-   npm install -g lite-server
-   lite-server
-   ```
+   This will start:
+   - **Frontend**: http://localhost:3001 (Vite dev server)
+   - **Backend API**: http://localhost:8000 (FastAPI)
+   - **API Docs**: http://localhost:8000/docs
 
-2. **Open in your browser**
+### Individual Development Commands
 
-   [http://localhost:8000](http://localhost:8000)
+If you need to run servers separately:
+
+```bash
+# Frontend only (Lit + Vite)
+npm run dev:frontend
+
+# Backend only (FastAPI + Python)
+npm run dev:backend
+```
+
+### Manual Setup (Alternative)
+
+If you prefer manual setup:
+
+```bash
+# Install Node.js dependencies
+npm install
+
+# Setup Python virtual environment and dependencies
+cd backend
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
 
 ---
 

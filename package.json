@@ -7,9 +7,9 @@
   "scripts": {
     "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\" --names \"FRONTEND,BACKEND\" --prefix-colors \"cyan,yellow\"",
     "dev:frontend": "vite",
-    "dev:backend": "cd backend && (source venv/bin/activate 2>/dev/null || true) && python3 run.py",
+    "dev:backend": "cd backend && source venv/bin/activate && python3 run.py",
     "dev:frontend-only": "vite",
-    "dev:backend-only": "cd backend && (source venv/bin/activate 2>/dev/null || true) && python3 run.py",
+    "dev:backend-only": "cd backend && source venv/bin/activate && python3 run.py",
     "setup": "./setup.sh",
     "build": "tsc && vite build",
     "preview": "vite preview",

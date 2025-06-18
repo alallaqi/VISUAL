@@ -1,0 +1,52 @@
+{
+  "timestamp": "2025-06-18T22:44:26.561624",
+  "url": "https://www.youtube.com/watch?v=ydYDqZQpim8",
+  "stream_info": {
+    "title": "Namibia: Live stream in the Namib Desert 2025-06-18 22:44",
+    "uploader": "NamibiaCam",
+    "id": "ydYDqZQpim8",
+    "is_live": true,
+    "live_status": "is_live",
+    "concurrent_view_count": 244,
+    "view_count": 92685935,
+    "thumbnail": "https://i.ytimg.com/vi/ydYDqZQpim8/maxresdefault.jpg"
+  },
+  "format_analysis": {
+    "total_formats": 14,
+    "hls_count": 14,
+    "dash_count": 0,
+    "live_count": 0,
+    "recommended_format": {
+      "format_id": "270",
+      "format_index": null,
+      "url": "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1750301065/ei/KSVTaK_QJdiY6dsPnMPHyQ4/ip/213.55.237.162/id/ydYDqZQpim8.44/itag/270/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hls_chunk_host/rr1---sn-n5au-1gil.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/900/manifest_duration/900/bui/AY1jyLOY-nFl0WhImZwqnxedZeBszrDkGmiHlPU5_bQkkpMELgTWCBXQ9s1mwDL1x3M8bDXrb9OKj_5_/spc/l3OVKUqFTz5segADc1z4JmdVJ8diBjb77Vo5WYbePihG6LqLZrPjKWjnqIQmWg/vprv/1/playlist_type/DVR/initcwndbps/2513750/met/1750279466,/mh/XM/mm/44/mn/sn-n5au-1gil/ms/lva/mv/m/mvi/1/pl/22/rms/lva,lva/dover/13/pacing/0/short_key/1/keepalive/yes/fexp/51466698/mt/1750279019/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgovp,rqh,xpc,playlist_duration,manifest_duration,bui,spc,vprv,playlist_type/sig/AJfQdSswRQIhAIJQHiiRRuF3-SpwT8BtMADuIW_Pzvzuzbw68AB4V-LAAiBFEfsRmkDPbl2WE3N7QiO2ppLUidd7jHyra4RUqMl4wA%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/APaTxxMwRAIgdAxsYi4X9pTZptITFA_aIO7SbCi8zDKfm4ezOEBZWW0CID8-faepGDssxn-G4p_WiQSqI0c_Yo5Qea2u7WLm1xUn/playlist/index.m3u8",
+      "manifest_url": "https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1750301065/ei/KSVTaK_QJdiY6dsPnMPHyQ4/ip/213.55.237.162/id/ydYDqZQpim8.44/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/playlist_duration/900/manifest_duration/900/demuxed/1/maudio/1/bui/AY1jyLOY-nFl0WhImZwqnxedZeBszrDkGmiHlPU5_bQkkpMELgTWCBXQ9s1mwDL1x3M8bDXrb9OKj_5_/spc/l3OVKUqFTz5segADc1z4JmdVJ8diBjb77Vo5WYbePihG6LqLZrPjKWjnqIQmWg/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/short_key/1/ncsapi/1/keepalive/yes/fexp/51466698/dover/13/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cdemuxed%2Cmaudio%2Cbui%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRAIgWdbCjQGxMvULTGTFFmSseqm2jlR_4BLtG8GdSkesYnACIHJ-RzKvotAZ9UYzjd44pHgDKsJIxywYMybjuabJujeu/file/index.m3u8",
+      "tbr": 4561.186,
+      "ext": "mp4",
+      "fps": 30.0,
+      "protocol": "m3u8_native",
+      "preference": null,
+      "quality": -1,
+      "has_drm": false,
+      "width": 1920,
+      "height": 1080,
+      "vcodec": "avc1.4D4028",
+      "acodec": "none",
+      "dynamic_range": "SDR",
+      "source_preference": -1,
+      "video_ext": "mp4",
+      "audio_ext": "none",
+      "abr": 0,
+      "vbr": 4561.186,
+      "resolution": "1920x1080",
+      "aspect_ratio": 1.78,
+      "http_headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-us,en;q=0.5",
+        "Sec-Fetch-Mode": "navigate"
+      },
+      "format": "270 - 1920x1080"
+    }
+  }
+}

@@ -3,38 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Wildlife Narration Web App - Real-time AI-powered narration of animal behavior from live YouTube streams, designed for visually impaired users.">
-  <meta name="keywords" content="accessibility, wildlife, narration, screen reader, WCAG, AI, live streams">
-  <meta name="author" content="Wildlife Narration Team">
+  <meta name="description" content="VISUAL - Your Virtual Inclusive Safari for Unique Adventurers">
+  <meta name="keywords" content="wildlife, narration, accessibility, virtual safari, inclusive">
+  <meta name="author" content="VISUAL Team">
   
   <!-- Accessibility and SEO -->
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0ea5e9">
+  <meta name="theme-color" content="#F97400">
   
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Wildlife Narration Web App">
-  <meta property="og:description" content="Experience wildlife through AI-powered narration designed for accessibility">
-  <meta property="og:url" content="https://wildlife-narration.app">
+  <meta property="og:title" content="VISUAL - Virtual Inclusive Safari">
+  <meta property="og:description" content="Welcome to a world where the wild comes alive through sound">
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" href="/favicon.png">
   
-  <!-- Preconnect to external domains for performance -->
-  <link rel="preconnect" href="https://www.youtube.com">
+  <!-- Preconnect to Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
-  <title>Wildlife Narration - Accessible Wildlife Streaming</title>
+  <title>VISUAL - Virtual Inclusive Safari</title>
   
-  <!-- Critical CSS will be inlined here by build process -->
+  <!-- Critical CSS for full-screen layout -->
   <style>
-    /* Critical loading styles */
-    body {
+    * {
       margin: 0;
-      font-family: system-ui, -apple-system, sans-serif;
-      background-color: #f8fafc;
-      color: #1e293b;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Dosis', system-ui, -apple-system, sans-serif;
+      overflow: hidden;
     }
     
     .loading {
@@ -44,28 +48,27 @@
       min-height: 100vh;
       flex-direction: column;
       gap: 1rem;
+      background: linear-gradient(135deg, #f8f4ff 0%, #fff0f8 100%);
     }
     
     .loading-spinner {
       width: 2rem;
       height: 2rem;
-      border: 2px solid #e2e8f0;
-      border-top: 2px solid #0ea5e9;
+      border: 3px solid #F97400;
+      border-top: 3px solid transparent;
       border-radius: 50%;
       animation: spin 1s linear infinite;
+    }
+    
+    .loading p {
+      font-size: 1.25rem;
+      color: #333;
+      font-weight: 600;
     }
     
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
-    }
-    
-    /* High contrast mode support */
-    @media (prefers-contrast: high) {
-      body {
-        background-color: #000000;
-        color: #ffffff;
-      }
     }
     
     /* Reduced motion support */
@@ -74,68 +77,72 @@
         animation: none;
       }
     }
+
+    /* Error boundary styles */
+    #error-boundary {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      background: #f8f4ff;
+      text-align: center;
+    }
+
+    #error-boundary h1 {
+      font-size: 2rem;
+      color: #dc2626;
+      margin-bottom: 1rem;
+    }
+
+    #error-boundary p {
+      font-size: 1.125rem;
+      color: #666;
+      margin-bottom: 2rem;
+      max-width: 500px;
+    }
+
+    #error-boundary button {
+      background: #F97400;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #error-boundary button:hover {
+      background: #E06600;
+    }
   </style>
 </head>
 <body>
-  <!-- Skip to main content link for screen readers -->
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary-600 focus:text-white focus:rounded">
-    Skip to main content
-  </a>
-  
   <!-- Loading state -->
   <div id="loading" class="loading" aria-live="polite">
     <div class="loading-spinner" aria-hidden="true"></div>
-    <p>Loading Wildlife Narration App...</p>
-    <p class="sr-only">Please wait while the application loads. This may take a few moments.</p>
+    <p>Loading VISUAL...</p>
   </div>
   
   <!-- Main application container -->
   <div id="app" style="display: none;">
-    <!-- Screen reader announcement region -->
-    <div id="announcements" aria-live="polite" aria-atomic="true" class="sr-only"></div>
-    
-    <!-- Main navigation -->
-    <nav role="navigation" aria-label="Main navigation">
-      <wildlife-nav></wildlife-nav>
-    </nav>
-    
-    <!-- Main content area -->
-    <main id="main-content" role="main" tabindex="-1">
-      <wildlife-app></wildlife-app>
-    </main>
-    
-    <!-- Footer -->
-    <footer role="contentinfo">
-      <wildlife-footer></wildlife-footer>
-    </footer>
+    <wildlife-app></wildlife-app>
   </div>
   
   <!-- Error boundary for JavaScript errors -->
   <div id="error-boundary" style="display: none;" role="alert" aria-live="assertive">
     <h1>Application Error</h1>
     <p>We're sorry, but something went wrong. Please refresh the page to try again.</p>
-    <button onclick="window.location.reload()" class="px-4 py-2 bg-primary-600 text-white rounded">
+    <button onclick="window.location.reload()">
       Refresh Page
     </button>
   </div>
   
   <!-- Application scripts -->
   <script type="module" src="/src/main.ts"></script>
-  
-  <!-- Service worker registration for PWA features -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then((registration) => {
-            console.log('SW registered: ', registration);
-          })
-          .catch((registrationError) => {
-            console.log('SW registration failed: ', registrationError);
-          });
-      });
-    }
-  </script>
   
   <!-- Global error handler -->
   <script>

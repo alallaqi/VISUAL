@@ -1,0 +1,85 @@
+{
+  "timestamp": "2025-06-18T22:44:06.971866",
+  "total_checked": 10,
+  "active_count": 1,
+  "active_streams": [
+    {
+      "url": "https://www.youtube.com/watch?v=ydYDqZQpim8",
+      "video_id": "ydYDqZQpim8",
+      "title": "Namibia: Live stream in the Namib Desert 2025-06-18 22:44",
+      "uploader": "NamibiaCam",
+      "is_live": true,
+      "live_status": "is_live",
+      "concurrent_viewers": 244,
+      "view_count": 92685935,
+      "thumbnail": "https://i.ytimg.com/vi/ydYDqZQpim8/maxresdefault.jpg",
+      "status": "success"
+    }
+  ],
+  "all_results": [
+    {
+      "url": "https://www.youtube.com/watch?v=ydYDqZQpim8",
+      "video_id": "ydYDqZQpim8",
+      "title": "Namibia: Live stream in the Namib Desert 2025-06-18 22:44",
+      "uploader": "NamibiaCam",
+      "is_live": true,
+      "live_status": "is_live",
+      "concurrent_viewers": 244,
+      "view_count": 92685935,
+      "thumbnail": "https://i.ytimg.com/vi/ydYDqZQpim8/maxresdefault.jpg",
+      "status": "success"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=kFBDn5PiL00",
+      "video_id": "kFBDn5PiL00",
+      "title": "Wikipedia",
+      "uploader": "Erik Mellquist",
+      "is_live": false,
+      "live_status": "not_live",
+      "concurrent_viewers": 0,
+      "view_count": 928682,
+      "thumbnail": "https://i.ytimg.com/vi/kFBDn5PiL00/hqdefault.jpg",
+      "status": "success"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=G_rWl_kSxt8",
+      "status": "no_info",
+      "is_live": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=gHiTEOBUjQs",
+      "status": "no_info",
+      "is_live": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=OHMYG8JsZKo",
+      "status": "no_info",
+      "is_live": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=3j8mr-gcS6A",
+      "status": "no_info",
+      "is_live": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=hFg17Ha_8_4",
+      "status": "no_info",
+      "is_live": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=wCkWgQ1YclE",
+      "status": "no_info",
+      "is_live": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=SNggmeilXDQ",
+      "status": "no_info",
+      "is_live": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Ihr_nwydXi0",
+      "status": "no_info",
+      "is_live": false
+    }
+  ]
+}

@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 @customElement('wildlife-footer')
 export class WildlifeFooter extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: block;
       background: #1f2937;
@@ -68,7 +68,7 @@ export class WildlifeFooter extends LitElement {
     }
   `;
 
-  render() {
+  override render() {
     return html`
       <footer class="footer-container" role="contentinfo">
         <div class="footer-content">

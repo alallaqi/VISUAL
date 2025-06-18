@@ -1,5 +1,5 @@
 from typing import Optional, List, Dict, Any
-from pydantic import BaseModel, HttpUrl, validator
+from pydantic import BaseModel, HttpUrl, field_validator, Field, ConfigDict
 from datetime import datetime
 from enum import Enum
 
@@ -31,6 +31,8 @@ class StreamQuality(str, Enum):
 
 class StreamMetadata(BaseModel):
     """Basic stream metadata from yt-dlp"""
+    model_config = ConfigDict(use_enum_values=True)
+    
     id: str
     title: str
     description: Optional[str] = None
@@ -56,6 +58,11 @@ class StreamMetadata(BaseModel):
 
 class StreamInfo(BaseModel):
     """Enhanced stream information for our application"""
+    model_config = ConfigDict(
+        populate_by_name=True,
+        use_enum_values=True
+    )
+    
     id: str
     title: str
     description: str
@@ -69,17 +76,18 @@ class StreamInfo(BaseModel):
     # Enhanced metadata
     uploader: Optional[str] = None
     upload_date: Optional[datetime] = None
-    last_updated: datetime = datetime.now()
+    last_updated: datetime = Field(default_factory=datetime.now)
     
     # Processing status
     is_processing: bool = False
     narration_enabled: bool = False
     
     # URLs
-    stream_url: Optional[HttpUrl] = None
+    hls_url: Optional[HttpUrl] = None
     webpage_url: Optional[HttpUrl] = None
     
-    @validator('viewer_count', pre=True)
+    @field_validator('viewer_count', mode='before')
+    @classmethod
     def validate_viewer_count(cls, v):
         return max(0, v or 0)
 
@@ -124,7 +132,7 @@ class FrameAnalysis(BaseModel):
     frame_timestamp: float
     detections: List[DetectionResult]
     frame_path: Optional[str] = None
-    processed_at: datetime = datetime.now()
+    processed_at: datetime = Field(default_factory=datetime.now)
 
 
 class NarrationRequest(BaseModel):
@@ -140,5 +148,5 @@ class NarrationResponse(BaseModel):
     stream_id: str
     text: str
     style: str
-    timestamp: datetime = datetime.now()
+    timestamp: datetime = Field(default_factory=datetime.now)
     confidence: float = 1.0 
